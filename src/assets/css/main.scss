@@ -1,0 +1,712 @@
+$primary: #FBC404;
+$background: #434343;
+$white: #fff;
+$gray: #9F9F9F;
+$light-gray: #cfcfcf;
+
+// fonts variables 
+$ikaros: 'Ikaros';
+$raleway: 'Raleway';
+
+@import "./breakpoints.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+
+@font-face {
+    font-family: 'Ikaros';
+    src: url("./fonts/Ikaros-Light.otf") format("opentype"),
+         url("./fonts/Ikaros-Regular.otf") format("opentype");
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    &::selection{
+        background-color: $primary;
+        color: $white;
+    }
+}
+
+body{
+    background-color: $background;
+    
+    position: relative;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+
+}
+
+.testing {
+    width: 100%;
+    position: absolute;
+    opacity: 0.2;
+}
+
+.frame-fix{
+    position: absolute;
+}
+header.frame-nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0 15px;
+    position: fixed;
+    top: 43px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    
+    @include media("<=tablet"){
+        top: 20px;
+        padding: 0 30px;
+    }
+    @include media("<=phone"){
+        padding: 0 15px;
+
+    }
+
+    .logo-tag{
+        font-family: $raleway;
+        font-weight: 300;
+        color: $white;
+        font-size: 26px;
+    }
+
+    .item-email{
+
+        a{
+            font-family: $raleway;
+            font-weight: 100;
+            font-size: 10px;
+            text-transform: uppercase;
+            color: $white;
+            letter-spacing: 3.3px;
+            text-decoration: none;
+        }
+        @include media("<=tablet"){
+            display: none;
+        }
+    }
+    .nav-items {
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            list-style: none;
+
+            @include media("<=tablet"){
+                display: none;
+            }
+
+            li {
+                a {
+                    color: $white;
+                    margin: 0px 14px;
+                    padding: 10px 6.5px;
+                    font-size: 10px;
+                    letter-spacing: 3.30px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-family: $raleway;
+                }
+            }
+
+        }
+        .nav-ham{
+            span{
+                width: 25px;
+                text-align: right;
+                display: block;
+                margin-bottom: 6px;
+                height: 3px;
+                background: white;
+                display:none;
+                @include media("<=tablet"){
+                    display: block;
+                }
+            }
+        }
+    }
+}
+footer.frame-footer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    color: $white;
+    text-transform: uppercase;
+    padding: 0 15px;
+    position: fixed;
+    bottom: 43px;
+    left: 0;
+    right: 0;
+
+    z-index: 99;
+
+    .item-follow{
+        p{
+            font-family: $raleway;
+            font-size: 10px;
+            letter-spacing: 3.30px;
+        }
+    }
+
+    .item-copyright{
+        hr{
+            width: 300px;
+        }
+    }
+    .item-count{
+        p{
+            font-family: $ikaros;
+            font-size: 10px;
+            letter-spacing: 3.30px;
+        }
+    }
+}
+
+header.frame-nav,footer.frame-footer{
+    max-width: 1217px;
+    margin: auto;
+}
+
+.d-none{
+    display: none;
+}
+
+
+.j-frame{
+    position: relative;
+    height: 100vh;
+}
+
+.j-frame-items{
+    position: relative;
+}
+.wrapper{
+    height: 100vh;
+    width: 92%;
+    margin: auto;
+}
+
+.frame-content{
+    margin: 0 122px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    @include media("<=992px"){
+        margin: 0 30px;
+    }
+    @include media("<=tablet"){
+        margin: 0 15px;
+    }
+}
+
+.info-metatag{
+    font-size: 22px;
+    font-family: ikaros;
+    font-weight: 600;
+    color: $primary;
+    letter-spacing: 3.3px;
+    margin-bottom: 18px;     
+}
+
+.frame-one{
+
+    &::before{
+        content: "01";
+        font-family: "ikaros";
+        font-weight: 600;
+        color: $gray;
+        font-size: 76vh;
+        position: absolute;
+        top: 0%;
+        bottom: 0;
+        left: -142px;
+        right: 0;
+        z-index: -9;
+        opacity: 0.08;
+        @include media("<=phone"){
+            font-size: 44vh;
+        }
+    }
+
+
+
+
+    .info-meta{
+        flex: 0 0 55%;
+
+        @include media("<=tablet"){
+            z-index: 2;
+            flex: 0 0 100%;
+        }
+        
+        .info-meta-position{
+            font-size: 12px;
+            font-family: $raleway;
+            color:$light-gray;
+            text-transform: uppercase;
+            letter-spacing: 3.3px;
+            margin-bottom: 20px;
+        }
+        .info-meta-heading{
+            font-family: $raleway;
+            font-size: 46px;
+            font-weight: 800;
+            color: #FBC404;
+
+            @include media("<=phone"){
+                font-size: 33px;
+            }
+        }
+        .info-meta-description{
+            width: 359px;
+            line-height: 31px;
+            color: $white;
+            font-family: ikaros;
+            letter-spacing: 0.6px;
+            font-weight: 600;
+            margin-top: 15px;
+
+            @include media("<=phone"){
+                width: 100%;
+                font-size: 13px;
+            }
+        }
+    }
+
+    .frame-meta-image{
+        position: relative;
+
+        @include media("<=tablet"){
+            display: none;
+        }
+
+
+        &::after{
+            content: "";
+            background: #737373;
+            position: absolute;
+            height: 271px;
+            width: 2px;
+            right: -11px;
+            top: 0;
+        }
+
+        .info-image{
+
+            mix-blend-mode: luminosity;
+            filter: drop-shadow(12px 20px 17px rgba(0, 0, 0, 0.3)) blur(0px);
+            position: relative;
+
+            @include media("<=680px"){
+                transform: scale(1.7);
+            }
+
+            .image-clip{
+                clip-path: polygon(25% 0, 100% 0, 100% 75%, 75% 100%, 0 100%, 0 25%);
+                height: 371px;
+                position: relative;
+                width: 274px;
+                mix-blend-mode: luminosity;
+                
+                img{
+                    position: absolute;
+                    width: 333px;
+                    top: -85px;
+                    left: -46px;
+                }
+            }
+        }
+        
+        .frame-meta-location{
+            position: absolute;
+            top: 0;
+            right: -97px;
+            font-family: $ikaros;
+            line-height: 27px;
+            font-size: 10px;
+            color: $white;
+            letter-spacing: 3.3px;
+        }
+        .frame-meta-camera{
+            position: absolute;
+            right: -81px;
+            bottom: 99px;
+            font-family: $ikaros;
+            line-height: 27px;
+            font-size: 10px;
+            color: $white;
+            letter-spacing: 3.3px;
+        }
+    }
+
+}
+
+
+.frame-two{
+
+    &::before{
+        content: "02";
+        font-family: "ikaros";
+        font-weight: 600;
+        color: $gray;
+        font-size: 76vh;
+        position: absolute;
+        top: 0%;
+        bottom: 0;
+        left: -142px;
+        right: 0;
+        z-index: -9;
+        opacity: 0.08;
+        overflow: hidden;
+
+        @include media("<=phone"){
+            font-size: 44vh;
+            overflow: unset;
+        }
+    }
+    .info-meta{
+
+        
+        width: 100%;
+
+        .info-description{
+            color: $white;
+            font-family: $ikaros;
+            letter-spacing: 0.6px;
+            font-weight: 600;
+            line-height: 31px;
+        }
+
+        .frame-skillset{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 30px;
+            
+
+            .f-sset{
+
+                flex: 0 0 33%;
+
+                @include media("<=480px"){
+                    flex: 0 0 100%;
+                    filter: drop-shadow(12px 20px 17px rgba(0, 0, 0, 0.3)) blur(0px);
+                }
+                
+                h3 {
+                    letter-spacing: 2.98px;
+                    font-family: $ikaros;
+                    text-transform: uppercase;
+                    color: $light-gray;
+                    @include media("<=tablet"){
+                        font-size: 12px;
+                    }
+                    @include media("<=480px"){
+                        text-align: center;
+                        background: #4f4f4f;
+                        padding: 15px;
+                        clip-path: polygon(10% 0, 100% 0, 100% 55%, 90% 100%, 0 100%, 0 45%);
+                        margin-bottom: 15px;
+                    }
+                }
+                .f-sset-items{
+
+                    @include media("<=480px"){
+                        width: max-content;
+                        margin: auto;
+                    }
+                    ul{
+                        list-style: none;
+                        padding-left: 20px;
+                        margin: 20px 0;
+
+                        @include media("<=480px"){
+                            display: none;
+                        }
+    
+                        li{
+                            color: $white;
+                            font-family: raleway;
+                            font-weight: 700;
+                            font-size: 12px;
+                            padding: 10px 0;
+                            letter-spacing: 2.70px;
+                            text-transform: uppercase;
+                            @include media("<=tablet"){
+                                font-size: 10px;
+                            }
+                        }
+                   
+                }
+ }
+            }
+
+        }
+    }
+    
+
+}
+
+
+.frame-three{
+
+    &::before{
+        content: "03";
+        font-family: "ikaros";
+        font-weight: 600;
+        color: $gray;
+        font-size: 76vh;
+        position: absolute;
+        top: 0%;
+        bottom: 0;
+        left: -142px;
+        right: 0;
+        z-index: -9;
+        opacity: 0.08;
+        overflow:hidden;
+
+        @include media("<=phone"){
+            overflow: unset;
+            font-size: 44vh;
+        }
+        
+    }
+
+    .v-center{
+
+        @include media("<=tablet"){
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    
+    .info-meta-l{
+        flex: 0 0 25%;
+        
+        .info-description{
+            color: $white;
+            font-family: $ikaros;
+            letter-spacing: 0.6px;
+            font-weight: 600;
+            line-height: 31px;
+
+            @include media("<=phone"){
+                font-size: 12px;
+            }
+        }
+        
+    }
+    .frame-work-r{
+        flex: 0 0 75%;
+
+        @include media("<=tablet"){
+            flex: 0 0 auto;
+        }
+        .proj-force{
+
+            a.proj-linked{
+                display: block;
+
+                &.proj-shadow{
+                    filter: drop-shadow(12px 20px 17px rgba(0, 0, 0, 0.3)) blur(0px);
+                    .proj-frame{
+                        clip-path: polygon(5% 0, 100% 0, 100% 75%, 95% 100%, 0 100%, 0 25%);
+                        background: black;
+                        height: 150px;
+                        margin: auto;
+                        margin-bottom: 10px;
+                        position: relative;
+                        width: 360px;
+                        
+                        @include media("<=phone"){
+                            height: 116px;
+                            width: 88vw;
+                        }
+
+                        .project-in{
+                            overflow: hidden;
+                            img{
+                                position: absolute;
+                                top: -50px;
+                                width: 100%;
+                                mix-blend-mode: luminosity;
+        
+                            }
+                        }
+                    }
+                }
+            }
+
+            .project-de{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                color: #fff;
+                background: #0000009e;
+
+                h3{
+                    font-family: raleway;
+                    letter-spacing: 3.3px;
+                    color: $primary;
+                    font-size: 33px;
+                    font-weight: 800;
+                    @include media("<=phone"){
+                        font-size: 24px;
+                    }
+                }
+                p{
+                    font-family: ikaros;
+                    letter-spacing: 3.3px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 12px;
+
+                }
+            }
+        }
+    }
+
+
+}
+
+.j-sticky{
+    height: 71vh;
+    background: $primary;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.frame-four{
+    .frame-flex{
+        display: flex;
+        &.v-center{
+            height: inherit;
+            align-items: center;
+            justify-content: center;
+            .frame-email{
+                p{
+                    font-family: raleway;
+                    color: #434343;
+                    font-weight: 600;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    letter-spacing: 3.3px;
+
+                    @include media("<=tablet"){
+                        font-size: 16px;
+                    }
+                }
+                a{
+                    text-decoration: none;
+                    color: $white;
+                    font-family: $raleway;
+                    font-weight: 800;
+                    h1{
+                        font-size: 3rem;
+
+                        @include media("<=tablet"){
+                            font-size: 2rem;
+                        }
+                        @include media("<=478px"){
+                            font-size: 1.6rem;
+                        }
+                        @include media("<=360px"){
+                            font-size: 1.3rem;
+                        }
+
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+.frame-background-lines{
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    
+
+    .frame-square{
+        overflow: hidden;
+        height: 100vh;
+        border: 1px solid #4a4a4a;
+        width: 24.8vw;
+        z-index: -10;
+        position: absolute;
+
+        
+        &:nth-child(1){
+            left: 0%;
+        }
+        &:nth-child(2){
+            left: 25%;
+        }
+        &:nth-child(3){
+            left: 50%;
+        }
+        &:nth-child(4){
+            left: 75%;
+        }
+    }
+
+    img{
+        position: absolute;
+        width: auto;
+        height: 800px;
+        top: -160px;
+        left: -73px;
+        opacity: 0.2;
+    }
+}
+
+
+.frame-bg-mobile{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50vw;
+    width: 50vw;
+
+    @include media("<=tablet"){
+        display: block;
+    }
+
+    .bg-wrapper{
+        position: relative;
+        overflow: hidden;
+        height: 100vh;
+
+        img{
+            position: absolute;
+            width: 630px;
+            left: -114px;
+            top: -112px;
+            mix-blend-mode: luminosity;
+            filter: brightness(0.7);
+
+            @include media("<=phone"){
+                left: -213px;
+            }
+
+        }
+    }
+}
