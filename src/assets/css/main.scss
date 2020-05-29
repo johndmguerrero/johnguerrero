@@ -14,8 +14,8 @@ $raleway: 'Raleway';
 
 @font-face {
     font-family: 'Ikaros';
-    src: url("./fonts/Ikaros-Light.otf") format("opentype"),
-         url("./fonts/Ikaros-Regular.otf") format("opentype");
+    src: url("../fonts/Ikaros-Light.otf") format("opentype"),
+         url("../fonts/Ikaros-Regular.otf") format("opentype");
 }
 
 
@@ -175,6 +175,7 @@ footer.frame-footer{
 header.frame-nav,footer.frame-footer{
     max-width: 1217px;
     margin: auto;
+    z-index: 3;
 }
 
 .d-none{
@@ -246,8 +247,11 @@ header.frame-nav,footer.frame-footer{
         flex: 0 0 55%;
 
         @include media("<=tablet"){
-            z-index: 2;
+            
             flex: 0 0 100%;
+        }
+        @include media("<=phone"){
+            z-index: 1;
         }
         
         .info-meta-position{
@@ -588,7 +592,7 @@ header.frame-nav,footer.frame-footer{
     height: 71vh;
     background: $primary;
     position: fixed;
-    bottom: 0;
+    bottom: -71vh;
     width: 100%;
 }
 
@@ -709,4 +713,126 @@ header.frame-nav,footer.frame-footer{
 
         }
     }
+}
+
+
+.frame-loader{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #212121;
+    z-index: 5;
+    overflow: hidden;
+    .frame-lo-wrapper{
+        position: relative;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: inherit;
+
+        .frame-lo-square{
+            height: 60px;
+            .sk-cube-grid {
+                width: 60px;
+                height: 60px;
+    
+                .sk-cube {
+                    width: 33%;
+                    height: 33%;
+                    background-color: $primary;
+                    float: left;
+                    -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+                            animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+                }
+                .sk-cube1{
+                    -webkit-animation-delay: 0.2s;
+                    animation-delay: 0.2s; 
+                }
+                .sk-cube2{
+                    -webkit-animation-delay: 0.3s;
+                    animation-delay: 0.3s;
+                }
+                .sk-cube3{
+                    -webkit-animation-delay: 0.4s;
+                    animation-delay: 0.4s;
+                }
+                .sk-cube4{
+                    -webkit-animation-delay: 0.1s;
+                    animation-delay: 0.1s;
+                }
+                .sk-cube5{
+                    -webkit-animation-delay: 0.2s;
+                    animation-delay: 0.2s;
+                }
+                .sk-cube6{
+                    -webkit-animation-delay: 0.3s;
+                    animation-delay: 0.3s;
+                }
+                .sk-cube7{
+                    -webkit-animation-delay: 0s;
+                    animation-delay: 0s; 
+                }
+                .sk-cube8{
+                    -webkit-animation-delay: 0.1s;
+                    animation-delay: 0.1s;
+                }
+                .sk-cube9{
+                    -webkit-animation-delay: 0.2s;
+                    animation-delay: 0.2s;
+                }
+            }
+        }
+        .frame-lo-percentage{
+            margin-top: 78px;
+            min-width: 170px;
+            height: 2px;
+            background: #4f4f4f;
+
+            hr{
+                border-color: #fff;
+                max-width: 170px;
+                width: 87%;
+            }
+        }
+    }
+
+}
+
+
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1); 
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  } 
+}
+
+.line{
+    position: relative;
+    overflow: hidden;
+    span{
+        position: absolute;
+    }
+}
+
+h1.line{
+    height: 54px;
+}
+p.line{
+    height: 14px;
 }
