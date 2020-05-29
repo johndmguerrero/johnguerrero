@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState , useRef} from 'react';
 import gsap from 'gsap';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -7,12 +7,13 @@ import FrameTwo from './components/FrameTwo';
 import FrameThree from './components/FrameThree';
 import FrameFour from './components/FrameFour';
 import Preloader from './components/Preloader';
-
+import { debounce } from 'lodash'; 
 
 function App() {
 
-
   const [ loading , setLoading ] = useState(false);
+
+  let frameList = useRef(null);
 
   const startIntro = (bool) => {
     if(bool){
@@ -38,8 +39,7 @@ function App() {
       .to('.frame-loader',1.6, {
         height: 0,
         ease: "expo.inOut",
-      })
-      ;
+      });
   
     }else {
       console.log("loading..");
@@ -49,31 +49,35 @@ function App() {
 
 
   useEffect(()=> {
+
+    // prevent flasing 
     gsap.to("body", 0, { css: { visibility: "visible" } });
 
+    // once all assets loaded set Loading to true
     window.onload = () => {
-
-
       setLoading(true);
-
     }
 
+    // start animation intro
     startIntro(loading);
+
+    // console.log ref frames
+    console.log(frameList);
     
   }, );
   
 
-  const slideFunction = (data) => {
-    console.log(`this scroll in id ${data}`);
-  }
+  const slideFunction = debounce(() => {
+        
+  }, 500);
 
   return (
     <>
     <Preloader />
     <Header />
     <Footer />
-    <div className="j-frame-items">
-      <FrameOne slideFunction={slideFunction} />
+    <div className="j-frame-items" ref={el => (frameList = el)}>
+      <FrameOne/>
       <FrameTwo/>
       <FrameThree/>
     </div>

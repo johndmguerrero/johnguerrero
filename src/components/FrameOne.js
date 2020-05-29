@@ -2,9 +2,9 @@ import React from 'react'
 
 
 
-const FrameOne = (props) => {
+const FrameOne = () => {
     return (
-        <div className="j-frame frame-one" onWheel={() => props.slideFunction(1)}>
+        <div className="j-frame frame-one">
             <div className="wrapper">
                 <div className="frame-content">
                     <div className="info-meta">

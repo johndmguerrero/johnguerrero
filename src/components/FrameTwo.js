@@ -2,7 +2,7 @@ import React from 'react'
 
 const FrameTwo = () => {
     return (
-        <div className="j-frame frame-two">
+        <div className="j-frame frame-two" >
             <div className="wrapper">
                 <div className="frame-content">
                     <div className="info-meta">
