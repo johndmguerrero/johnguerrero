@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/johnguerrero/static/css/main.bf81cc69.chunk.css",
+    "main.css": "/johnguerrero/static/css/main.0e6f681b.chunk.css",
     "main.js": "/johnguerrero/static/js/main.877857ea.chunk.js",
     "main.js.map": "/johnguerrero/static/js/main.877857ea.chunk.js.map",
     "runtime-main.js": "/johnguerrero/static/js/runtime-main.480f1196.js",
@@ -8,9 +8,9 @@
     "static/js/2.5cee117f.chunk.js": "/johnguerrero/static/js/2.5cee117f.chunk.js",
     "static/js/2.5cee117f.chunk.js.map": "/johnguerrero/static/js/2.5cee117f.chunk.js.map",
     "index.html": "/johnguerrero/index.html",
-    "precache-manifest.4487700f89a6c4b0c5b587fb58df67bb.js": "/johnguerrero/precache-manifest.4487700f89a6c4b0c5b587fb58df67bb.js",
+    "precache-manifest.339313b79c85ed4accaf0ac9a34ea510.js": "/johnguerrero/precache-manifest.339313b79c85ed4accaf0ac9a34ea510.js",
     "service-worker.js": "/johnguerrero/service-worker.js",
-    "static/css/main.bf81cc69.chunk.css.map": "/johnguerrero/static/css/main.bf81cc69.chunk.css.map",
+    "static/css/main.0e6f681b.chunk.css.map": "/johnguerrero/static/css/main.0e6f681b.chunk.css.map",
     "static/js/2.5cee117f.chunk.js.LICENSE.txt": "/johnguerrero/static/js/2.5cee117f.chunk.js.LICENSE.txt",
     "static/media/main.scss": "/johnguerrero/static/media/Ikaros-Regular.098c7890.otf",
     "static/media/nppl.jpg": "/johnguerrero/static/media/nppl.c5091233.jpg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.480f1196.js",
     "static/js/2.5cee117f.chunk.js",
-    "static/css/main.bf81cc69.chunk.css",
+    "static/css/main.0e6f681b.chunk.css",
     "static/js/main.877857ea.chunk.js"
   ]
 }
