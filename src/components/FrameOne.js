@@ -1,8 +1,7 @@
 import React from 'react'
 
-
-
 const FrameOne = () => {
+
     return (
         <div className="j-frame frame-one">
             <div className="wrapper">

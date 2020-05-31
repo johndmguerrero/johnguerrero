@@ -592,6 +592,7 @@ header.frame-nav,footer.frame-footer{
     position: fixed;
     bottom: -71vh;
     width: 100%;
+    z-index: 5;
 }
 
 .frame-four{
@@ -720,7 +721,7 @@ header.frame-nav,footer.frame-footer{
     width: 100%;
     height: 100vh;
     background: #212121;
-    z-index: 5;
+    z-index: 4;
     overflow: hidden;
     .frame-lo-wrapper{
         position: relative;
@@ -833,4 +834,19 @@ h1.line{
 }
 p.line{
     height: 14px;
+}
+
+
+.frame-slide-overlay{
+    backface-visibility: hidden;
+    background: #212121;
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    z-index: 101;
+}
+
+.frame-item{
+    position: relative;
+    overflow: hidden;
 }

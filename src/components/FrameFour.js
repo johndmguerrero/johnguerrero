@@ -1,8 +1,8 @@
 import React from 'react'
 
-const FrameFour = () => {
+const FrameFour = (props) => {
     return (
-        <div className="j-sticky frame-four">
+        <div className={"j-sticky frame-four "+props.isActive}>
             <div className="frame-flex v-center">
                 <div className="frame-email">
                     <p>email me at:</p>
