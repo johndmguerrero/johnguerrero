@@ -6,9 +6,9 @@ import FrameOne from './components/FrameOne';
 import FrameTwo from './components/FrameTwo';
 import FrameThree from './components/FrameThree';
 import FrameFour from './components/FrameFour';
-import Preloader from './components/Preloader';
+
 import { debounce } from 'lodash'; 
-import FrameOverlay from './components/FrameOverlay';
+
 import { Swipeable } from 'react-swipeable';
 
 
@@ -225,7 +225,23 @@ function App() {
 
   return (
     <>
-    <Preloader />
+    <div className="frame-loader">
+        <div className="frame-lo-wrapper">
+            <div className="frame-lo-square">
+                <div className="sk-cube-grid">
+                    <div className="sk-cube sk-cube1"></div>
+                    <div className="sk-cube sk-cube2"></div>
+                    <div className="sk-cube sk-cube3"></div>
+                    <div className="sk-cube sk-cube4"></div>
+                    <div className="sk-cube sk-cube5"></div>
+                    <div className="sk-cube sk-cube6"></div>
+                    <div className="sk-cube sk-cube7"></div>
+                    <div className="sk-cube sk-cube8"></div>
+                    <div className="sk-cube sk-cube9"></div>
+                </div>
+            </div>     
+        </div>
+    </div>
     <Header />
     <Footer />
     <Swipeable onSwiped={(e) => slideMe(e.dir)}>
@@ -244,7 +260,7 @@ function App() {
       </div>
     </div>
     </Swipeable>
-    <FrameOverlay/>
+    <div className="frame-slide-overlay"></div>
     </>
   );
 }

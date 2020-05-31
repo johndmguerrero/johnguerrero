@@ -250,9 +250,7 @@ header.frame-nav,footer.frame-footer{
             
             flex: 0 0 100%;
         }
-        @include media("<=phone"){
-            z-index: 1;
-        }
+
         
         .info-meta-position{
             font-size: 12px;
