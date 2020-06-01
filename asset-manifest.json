@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/johnguerrero/static/css/main.b1ccc75f.chunk.css",
-    "main.js": "/johnguerrero/static/js/main.877857ea.chunk.js",
-    "main.js.map": "/johnguerrero/static/js/main.877857ea.chunk.js.map",
+    "main.css": "/johnguerrero/static/css/main.2a36ab4d.chunk.css",
+    "main.js": "/johnguerrero/static/js/main.23968ade.chunk.js",
+    "main.js.map": "/johnguerrero/static/js/main.23968ade.chunk.js.map",
     "runtime-main.js": "/johnguerrero/static/js/runtime-main.480f1196.js",
     "runtime-main.js.map": "/johnguerrero/static/js/runtime-main.480f1196.js.map",
     "static/js/2.5cee117f.chunk.js": "/johnguerrero/static/js/2.5cee117f.chunk.js",
     "static/js/2.5cee117f.chunk.js.map": "/johnguerrero/static/js/2.5cee117f.chunk.js.map",
     "index.html": "/johnguerrero/index.html",
-    "precache-manifest.cf118f153399da0aca940c504a6610aa.js": "/johnguerrero/precache-manifest.cf118f153399da0aca940c504a6610aa.js",
+    "precache-manifest.2c36b788fb7bc252892f9aa9c02bdeaf.js": "/johnguerrero/precache-manifest.2c36b788fb7bc252892f9aa9c02bdeaf.js",
     "service-worker.js": "/johnguerrero/service-worker.js",
-    "static/css/main.b1ccc75f.chunk.css.map": "/johnguerrero/static/css/main.b1ccc75f.chunk.css.map",
+    "static/css/main.2a36ab4d.chunk.css.map": "/johnguerrero/static/css/main.2a36ab4d.chunk.css.map",
     "static/js/2.5cee117f.chunk.js.LICENSE.txt": "/johnguerrero/static/js/2.5cee117f.chunk.js.LICENSE.txt",
-    "static/media/main.scss": "/johnguerrero/static/media/Ikaros-Regular.098c7890.otf",
-    "static/media/nppl.jpg": "/johnguerrero/static/media/nppl.c5091233.jpg",
-    "static/media/perpetual-help.jpg": "/johnguerrero/static/media/perpetual-help.1e09402e.jpg",
-    "static/media/tomoe.jpg": "/johnguerrero/static/media/tomoe.5820bf53.jpg"
+    "static/media/main.css": "/johnguerrero/static/media/Ikaros-Regular.098c7890.otf",
+    "static/media/nppl.jpg": "/johnguerrero/static/media/nppl.c9d4756e.jpg",
+    "static/media/perpetual-help.jpg": "/johnguerrero/static/media/perpetual-help.4336af55.jpg",
+    "static/media/tomoe.jpg": "/johnguerrero/static/media/tomoe.4884d63b.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.480f1196.js",
     "static/js/2.5cee117f.chunk.js",
-    "static/css/main.b1ccc75f.chunk.css",
-    "static/js/main.877857ea.chunk.js"
+    "static/css/main.2a36ab4d.chunk.css",
+    "static/js/main.23968ade.chunk.js"
   ]
 }
